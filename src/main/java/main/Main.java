@@ -17,6 +17,7 @@ public class Main {
         j.pack();
         j.setLocationRelativeTo(null);
         j.setVisible(true);
+        gp.setupGame();
         gp.startGameThrad();
     }
 }

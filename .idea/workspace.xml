@@ -5,11 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2412a0c-704d-49b9-9694-457849ff6ab2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/player/characterSheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/AssetManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/CollisionChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/main/Sound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/object/OBJ_Boots.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/object/OBJ_Chest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/object/OBJ_Door.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/object/OBJ_Key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/object/SuperObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tile/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tile/TileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/map/map1_layerOne.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/map/map1_layerTwo.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/map/world01.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/axe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/boots.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/chest (OLD).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/chest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/chest_opened.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/coin_bronze.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/door.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/heart_blank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/heart_full.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/heart_half.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/key.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/lantern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/manacrystal_blank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/manacrystal_full.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/potion_red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/shield_blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/shield_wood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/sword_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/objects/tent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/BlueBoyAdventure.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/blocked.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/burning.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/coin.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/cursor.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/cuttree.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/fanfare.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/gameover.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/hitmonster.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/levelup.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/parry.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/powerup.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/receivedamage.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/sleep.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/stairs.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sound/unlock.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/earth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/grass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/sand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/tilesSet1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/tree.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/wall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tiles/water.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +98,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Victo/IdeaProjects/Game/src/main/resources/player",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Victo/IdeaProjects/Game/src/main/resources/sound",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -51,10 +108,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Victo\IdeaProjects\Game\src\main\resources\objects" />
+      <recent name="C:\Users\Victo\IdeaProjects\Game\src\main\resources\tiles" />
+      <recent name="C:\Users\Victo\IdeaProjects\Game\src\main\resources\map" />
       <recent name="C:\Users\Victo\IdeaProjects\Game\src\main\resources\player" />
       <recent name="C:\Users\Victo\IdeaProjects\Game\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Victo\IdeaProjects\Game\src\main\resources\tiles" />
       <recent name="C:\Users\Victo\IdeaProjects\Game\src\main\resources\player" />
     </key>
   </component>

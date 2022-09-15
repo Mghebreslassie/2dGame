@@ -15,22 +15,37 @@ public class Player extends Entity {
 
     GamePanel gp;
     KeyHandler keyH;
+    public final int screenX;
+    public final int screenY;
+    public int hasKey = 0;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
         this.keyH = keyH;
+        screenX = gp.screenWidth / 2 - (gp.tileSize / 2);
+        screenY = gp.screenHeight / 2 - (gp.tileSize / 2);
+
+        solidArea = new Rectangle();
+        solidArea.x = 8;
+        solidArea.y = 16;
+        solidArea.width = 32;
+        solidArea.height = 32;
+        solidArea = new Rectangle(8, 16, 32, 32);
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
         setDefaultValues();
         getPlayerImage();
     }
 
     public void setDefaultValues() {
-        x = 100;
-        y = 100;
+        worldX = gp.tileSize * 20;
+        worldY = gp.tileSize * 20;
         speed = 4;
         direction = "down";
         lastDirection = "";
         frameIndex = 0;
         spriteCounter = 0;
+
     }
 
     public void getPlayerImage() {
@@ -69,16 +84,38 @@ public class Player extends Entity {
                 || keyH.rightPressed) {
             if (keyH.upPressed) {
                 direction = "up";
-                y -= speed;
+
             } else if (keyH.downPressed) {
                 direction = "down";
-                y += speed;
+
             } else if (keyH.leftPressed) {
                 direction = "left";
-                x -= speed;
+
             } else if (keyH.rightPressed) {
                 direction = "right";
-                x += speed;
+
+            }
+
+            collisionOn = false;
+            gp.cChecker.checkTile(this);
+            int objIndex = gp.cChecker.checkObject(this, true);
+
+            pickUpObject(objIndex);
+            if (collisionOn == false) {
+                switch (direction) {
+                    case "up":
+                        worldY -= speed;
+                        break;
+                    case "down":
+                        worldY += speed;
+                        break;
+                    case "right":
+                        worldX += speed;
+                        break;
+                    case "left":
+                        worldX -= speed;
+                        break;
+                }
             }
             spriteCounter++;
             if (spriteCounter == 8) {
@@ -87,6 +124,35 @@ public class Player extends Entity {
                     frameIndex = 0;
                 }
                 spriteCounter = 0;
+            }
+        }
+    }
+
+    public void pickUpObject(int i) {
+        if (i != 999) {
+            String objectName = gp.objects[i].name;
+            switch (objectName) {
+                case "Key":
+                    gp.playSE(1);
+                    hasKey++;
+                    gp.objects[i] = null;
+                    System.out.println("key: " + hasKey);
+                    break;
+                case "Door":
+                    if (hasKey > 0) {
+                        gp.playSE(3);
+                        gp.objects[i] = null;
+//                        gp.objects[i].collision = false;
+                        hasKey--;
+                    }
+                    System.out.println("key: " + hasKey);
+                    break;
+
+                case "Boots":
+                    gp.playSE(2);
+                    gp.objects[i] = null;
+                    speed *= 2;
+                    break;
             }
         }
     }
@@ -128,6 +194,8 @@ public class Player extends Entity {
                 break;
         }
 
-        g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
+        //draw character in middle of screen
+        //x should be halfway from left side and half way from down
+        g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
     }
 }
