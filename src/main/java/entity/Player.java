@@ -136,7 +136,7 @@ public class Player extends Entity {
                     gp.playSE(1);
                     hasKey++;
                     gp.objects[i] = null;
-                    System.out.println("key: " + hasKey);
+                    gp.ui.showMessage("You got a key!");
                     break;
                 case "Door":
                     if (hasKey > 0) {
@@ -144,14 +144,22 @@ public class Player extends Entity {
                         gp.objects[i] = null;
 //                        gp.objects[i].collision = false;
                         hasKey--;
+                        gp.ui.showMessage("You opened the door!");
+                    } else {
+                        gp.ui.showMessage("You need a key!");
                     }
-                    System.out.println("key: " + hasKey);
                     break;
 
                 case "Boots":
                     gp.playSE(2);
                     gp.objects[i] = null;
                     speed *= 2;
+                    gp.ui.showMessage("You speed has increased!");
+                    break;
+                case "Chest":
+                    gp.ui.gameFinished = true;
+                    gp.stopMusic();
+                    gp.playSE(4);
                     break;
             }
         }
